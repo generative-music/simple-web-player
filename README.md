@@ -18,8 +18,9 @@ This example assumes audio files are hosted in `/audio`.
 
   <script>
     gmPlayerFactory({
-      host: '/audio'
-      piece: pieceObservableStreams
+      host: '/audio',
+      piece: pieceObservableStreams,
+      gain: 0.5, // A value from 0 to 1, where 0 is silence and 1 is full volume. Defaults to 1.
     }).then(({start, stop}) => {
       var playButton = document.getElementById('play-btn');
       playButton.onclick = start;
